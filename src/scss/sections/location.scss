@@ -1,0 +1,41 @@
+.location {
+    position: relative;
+    padding: 180px 0;
+    overflow: hidden;
+
+    &::before {
+        content: "V";
+        position: absolute;
+        top: 180px;
+        right: calc(50% + 555px);
+        transform: translateX(50%);
+        font-family: "Playfair Display";
+        font-weight: 700;
+        font-size: 400px;
+        line-height: 1;
+        opacity: 0.02;
+        z-index: -9;
+    }
+
+    .title-2 {
+        margin-bottom: 88px;
+
+        /* Medium media */
+        @include mediaMD {
+            margin-bottom: 44px;
+        }
+    }
+
+    /* Medium media */
+    @include mediaMD {
+        padding: 90px 0;
+    }
+}
+
+.location__map {
+}
+
+.map {
+    height: 358px;
+    background-color: #626262;
+}

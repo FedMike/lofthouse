@@ -1,0 +1,33 @@
+.feedback {
+    padding-bottom: 180px;
+
+    .title-2 {
+        margin-bottom: 38px;
+
+        /* Medium media */
+        @include mediaMD {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+
+        /* Medium media */
+        @include mediaMD {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* Small media */
+        @include mediaSM {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Medium media */
+    @include mediaMD {
+        padding-bottom: 90px;
+    }
+}

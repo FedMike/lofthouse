@@ -1,0 +1,48 @@
+.cta {
+    padding: 180px 0;
+    background: linear-gradient(180deg, $color-dark 10.42%, rgba(36, 43, 51, 0) 50.52%, $color-dark 90.1%), linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)), url("./../img/cta/cta-bg.jpg");
+    background-position: 50%;
+
+    .title-2 {
+        margin-bottom: 17px;
+    }
+
+    &__row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+
+        /* Medium media */
+        @include mediaMD {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__text {
+        & > * + * {
+            margin-top: 15px;
+        }
+
+        /* Medium media */
+        @include mediaMD {
+            font-size: 14px;
+        }
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 30px;
+
+        /* Small media */
+        @include mediaSM {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Medium media */
+    @include mediaMD {
+        padding: 60px 0;
+    }
+}

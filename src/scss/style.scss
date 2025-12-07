@@ -1,0 +1,23 @@
+// Base
+@import "./base/fonts";
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/base";
+
+// Blocks
+@import "./blocks/titles";
+@import "./blocks/form";
+@import "./blocks/menu-burger";
+@import "./blocks/card";
+@import "./blocks/youtubeLightbox";
+@import "./blocks/yandex-map";
+
+// Sections
+@import "./sections/header";
+@import "./sections/benefits";
+@import "./sections/apartments";
+@import "./sections/cta";
+@import "./sections/video";
+@import "./sections/location";
+@import "./sections/feedback";
+@import "./sections/footer";

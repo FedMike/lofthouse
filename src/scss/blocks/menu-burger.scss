@@ -1,0 +1,66 @@
+/* Nav Icon */
+.menu-burger__btn {
+    --time: 0.1s;
+    --width: 40px;
+    --height: 30px;
+    --line-height: 1px;
+    --line-margin: 2;
+    --color: #fff;
+
+    height: var(--height);
+    width: var(--width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: unset;
+    border: none;
+}
+
+span {
+    display: block;
+    position: relative;
+    width: var(--width);
+    height: var(--line-height);
+    background-color: var(--color);
+}
+
+span::before,
+span::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    left: 0;
+
+    width: var(--width);
+    height: var(--line-height);
+
+    background-color: var(--color);
+    transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+}
+
+span::before {
+    top: calc(var(--line-height) * -8);
+}
+
+span::after {
+    top: calc(var(--line-height) * 8);
+}
+
+span.active {
+    background-color: transparent;
+}
+
+span.active::before,
+span.active::after {
+    top: 0;
+    transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+span.active::before {
+    transform: rotate(45deg);
+}
+
+span.active::after {
+    transform: rotate(-45deg);
+}

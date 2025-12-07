@@ -1,0 +1,51 @@
+.footer {
+    padding-top: 72px;
+    padding-bottom: 51px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    background-color: $color-gray;
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        & > * {
+            flex: 25%;
+        }
+
+        /* Medium media */
+        @include mediaMD {
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 40px;
+        }
+    }
+
+    &__logo {
+        margin-top: -12px;
+    }
+
+    &__nav {
+        & > * + * {
+            margin-top: 15px;
+        }
+    }
+
+    &__contacts {
+    }
+
+    &__socials {
+        display: flex;
+        margin-top: 20px;
+
+        & > * + * {
+            margin-left: 22px;
+        }
+    }
+
+    /* Medium media */
+    @include mediaMD {
+        padding-top: 36px;
+        padding-bottom: 25px;
+    }
+}
